@@ -1,0 +1,57 @@
+<div class="container">
+    <h1>The American Food: Burgers</h1>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="addBurger">Add a Burger</label>
+                    <input type="text" class="form-control" id="addBurger">
+                </div>
+                <button type="submit" class="btn btn-primary" id="eatMe">To Be Eaten</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-7" id="toEat">
+            <h2>Burgers Ready to Eat</h2>
+            {{#each burger}}
+            {{#unless this.devoured}}
+            <h4>{{this.burger_name}}</h4>
+            <button class="btn btn-primary" id="devourButton" data-id={{this.id}}>Eat Me!</button>
+
+
+            {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-5" id="iAte">
+            <h2>Burgers You've Eaten</h2>
+            {{#each burger}}
+            {{#if this.devoured}}
+            <h4>{{this.burger_name}}</h4>
+
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="row">
+        <footer>
+            <span>
+            <a class="icons" href="https://www.instagram.com/jgturner/"><i class="fab fa-instagram fa-2x"></i></a>
+            <a class="icons" href="https://www.linkedin.com/in/jgregoryturner/"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            <a class="icons" href="https://github.com/jgturner1979"><i class="fab fa-github fa-2x"></i></a>
+        </span>
+        <p class="footer-text">Greg Turner, Copyright &copy; 2018</p>
+
+        </footer>
+
+    </div>
+
+</div>
+
+</div>
